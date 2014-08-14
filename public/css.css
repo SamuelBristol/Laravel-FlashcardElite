@@ -1,0 +1,129 @@
+body{
+	background-color: #999999;
+	font-family: Arial, sans serif;
+}
+.accent{
+	color: #3E7233;
+}
+hr, p{
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-top: .5em;
+	margin-bottom: .5em;
+}	
+.flashcard{
+	background-color: #FFFFFF;
+	margin: 1em;
+	position: relative;
+	float: left;
+	border: 1px solid black;
+	width: 320px;
+	height: 192px;
+	overflow: hidden;
+}
+.delete{
+	background-color: #FF3333;
+	color: #FFFFFF;
+	position: absolute;
+	font-weight: bold;
+	font-family: "Arial", "sans serif";
+	text-decoration: none;
+	top: 0;
+	right: 0;
+	min-width: 1em;
+	min-height: 1em;
+	padding: 5px;
+	text-align: center;
+	float: right;
+}
+.edit{
+	background-color: #3333FF;
+	color: #FFFFFF;
+	position: absolute;
+	font-weight: bold;
+	font-family: "Arial", "sans serif";
+	text-decoration: none;
+	bottom: 0;
+	right: 0;
+	min-width: 1em;
+	min-height: 1em;
+	padding: 5px;
+	text-align: center;
+	float: right;
+}
+.edit:hover{
+	background-color: #AAAAFF;
+}
+.delete:hover{
+	background-color: #FFAAAA;
+}
+.title{
+	font-size: 1.25em;
+}
+label{
+	float: left;
+	display: block;
+	text-align: right;
+	width: 120px;
+	padding-right: 1em;
+}
+input, textarea{
+	display: block;
+	margin-bottom: 20px;
+}
+#banner{
+	background-color: #AACCCC;
+	text-align: left;
+	padding: .5em;
+	font-size: .8em;
+	color: #FFFFFF;
+}
+#content{
+	padding: .5em;
+	overflow: auto;
+}
+nav a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+nav a:hover{
+	color: #553300;
+}
+nav li:hover{
+	background-color: #DDBB00;
+}
+nav li{
+	list-style-type: none;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+nav li a {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: .5em;
+}
+nav ul{
+	margin: 0;
+	background-color: #553300;
+	overflow: auto;
+}
+table{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: .5em;
+	margin-top: .5em;
+	border: 1px solid #113311;
+	background-color: #669966;
+}
+#wrapper{
+	background-color: #3E7233;
+	width: 80%; 
+	min-width:960px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: .5em;
+}

@@ -1,3 +1,4 @@
+<h2>Create A New Card</h2>
 @extends('layouts.master')
 	@section('content')
       {{ Form::open(array('url' => 'insertCard')) }}

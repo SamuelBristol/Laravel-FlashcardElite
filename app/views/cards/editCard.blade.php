@@ -1,9 +1,12 @@
 <h2>Edit A Card</h2>
-<form action="/updateCard" method="post">
-	<label for="fc_name">*Flashcard Title:</label>
-	<input id="fc_name" name="fc_name" value="<?= $fc_name ?>" />
-	<label for="fc_desc">*Description:</label>
-	<textarea id="fc_desc" name="fc_desc"><?= $fc_desc ?></textarea>
-	<input type="hidden" name="fc_id" value="<?= $fc_id ?>" />
-	<input type="submit" />
-</form>
+@extends('layouts.master')
+	@section('content')
+      {{ Form::open(array('url' => 'updateCard')) }}
+        {{ Form::label('name', 'Card Name') }}
+        {{ Form::text('name', $card->name) }}
+        {{ Form::label('desc', 'Card Description') }}
+        {{ Form::textarea('desc', $card->desc) }}
+		{{ Form::hidden('id', $card->id) }}
+        {{ Form::submit('Save') }} 
+      {{ Form::close() }}
+	@stop

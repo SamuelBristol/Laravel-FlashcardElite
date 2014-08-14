@@ -26,8 +26,12 @@ class CardsController extends BaseController {
     return Redirect::to('/');
   }
   
-  public function editCard(){
-    $this->layout->content = View::make('cards.index');
+  public function editCard($id){
+    $card = Card::find($id);
+    
+    View::share('card', $card);
+    
+    $this->layout->content = View::make('cards.editCard');
   }
   
   public function deleteCard($id){

@@ -4,6 +4,10 @@ class CardsController extends BaseController {
   
   protected $layout = 'layouts.master';
   
+  public function __construct() {
+    $this->beforeFilter('csrf', array('on'=>'post'));
+  }
+  
   public function showIndex(){
     
     // get all cards from database
@@ -47,7 +51,15 @@ class CardsController extends BaseController {
     $this->layout->content = View::make('cards.newCard');
   }
   
-  public function updateCard(){
-    $this->layout->content = View::make('cards.index');
+  public function updateCard(){    
+    $this->layout = null;
+    
+    $card = Card::find(Input::get('id'));
+    $card->name = Input::get('name');
+    $card->desc = Input::get('desc');
+    
+    $card->save();
+    
+    return Redirect::to('/');
   }
 }

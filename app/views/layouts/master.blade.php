@@ -13,9 +13,18 @@
 			<ul>
               <li><a href="/">Home</a></li>
               <li><a href="/newCard">New Flash Card</a></li>
+              @if(!Auth::check())
+              	<li>{{ HTML::link('users/register', 'Register') }}</li>  
+              	<li>{{ HTML::link('users/login', 'Login') }}</li>  
+              @else
+              	<li>{{ HTML::link('users/logout', 'logout') }}</li>
+              @endif
 			</ul>
 		</nav>
 		<div id="content">
+          @if(Session::has('message'))
+            <p class="alert">{{ Session::get('message') }}</p>
+          @endif
 <!--END HEADER-->
 @yield('content')      
 <!--BEGIN FOOTER-->

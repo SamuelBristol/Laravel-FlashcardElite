@@ -17,3 +17,4 @@ Route::get('deleteCard/{id}', array('uses' => 'CardsController@deleteCard'));
 Route::get('editCard/{id}', array('uses' => 'CardsController@editCard'));
 Route::post('insertCard', array('uses' => 'CardsController@insertCard'));
 Route::post('updateCard', array('uses' => 'CardsController@updateCard'));
+Route::controller('users', 'UsersController');
